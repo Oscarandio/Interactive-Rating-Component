@@ -6,7 +6,6 @@ const starSpotSelection = document.querySelectorAll('.star-spot');
 const rating = document.querySelector('.rating');
 let starsScore = 3;
 
-button.addEventListener('click', onSubmit);
 starTab.forEach(btn => {
     btn.addEventListener('click', handleRatingBtnClick);
 });
@@ -25,7 +24,9 @@ function handleRatingBtnClick(e){
     starsScore = e.target.textContent;
 }
 
-function onSubmit(){
+button.addEventListener('click', onSubmit);
+
+function onSubmit() {
     thanksPage.classList.remove('hide');
     selectionPage.classList.add('hide');
     rating.textContent = starsScore;
